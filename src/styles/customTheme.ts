@@ -44,7 +44,7 @@ const customTheme = extendTheme({
     sm: "14px",
     md: "16px",
     lg: "18px",
-    xl: "2px",
+    xl: "20px",
     "2xl": "24px",
     "3xl": "28px",
     "4xl": "36px",
