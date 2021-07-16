@@ -1,37 +1,30 @@
-import { Box, Heading, Text, Button, Divider } from "@chakra-ui/react";
+import { Box, Text, Button, Divider } from "@chakra-ui/react";
+import {
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  MobileH1,
+  MobileH2,
+  MobileH3,
+} from "@/components/Heading";
 export default function Styleguide() {
   return (
     <Box>
-      <Heading as="h1">Heading</Heading>
-      <Heading variant="h1" as="h1">
-        H1
-      </Heading>
-      <Heading variant="h2" as="h2">
-        H2
-      </Heading>
-      <Heading variant="h3" as="h3">
-        H3
-      </Heading>
-      <Heading variant="h4" as="h4">
-        H4
-      </Heading>
-      <Heading variant="h5" as="h5">
-        H5
-      </Heading>
-      <Heading variant="h6" as="h6">
-        H6
-      </Heading>
-      <Heading variant="mobile-h1" as="h1">
-        Mobile H1
-      </Heading>
-      <Heading variant="mobile-h2" as="h2">
-        Mobile H2
-      </Heading>
-      <Heading variant="mobile-h3" as="h3">
-        Mobile H3
-      </Heading>
+      <H1>Heading</H1>
+      <H1>H1</H1>
+      <H2>H2</H2>
+      <H3>H3</H3>
+      <H4>H4</H4>
+      <H5>H5</H5>
+      <H6>H6</H6>
+      <MobileH1>Mobile H1</MobileH1>
+      <MobileH2>Mobile H2</MobileH2>
+      <MobileH3>Mobile H3</MobileH3>
       <Divider />
-      <Heading>BodyText</Heading>
+      <H1>BodyText</H1>
       <Text variant="3xl">3XLarge</Text>
       <Text variant="2xl">2XLarge</Text>
       <Text variant="xl">XLarge</Text>
@@ -41,10 +34,10 @@ export default function Styleguide() {
       <Text variant="xs">XSmall</Text>
       <Text variant="subtitle">Subtitle</Text>
       <Text variant="subtitle2">Subtitle2</Text>
-      <Heading variant="mobile-lg">Mobile Large</Heading>
-      <Heading variant="mobile-semibold">Mobile Semibold</Heading>
+      <Text variant="mobile-lg">Mobile Large</Text>
+      <Text variant="mobile-semibold">Mobile Semibold</Text>
       <Divider />
-      <Heading>Button</Heading>
+      <H1>Button</H1>
       <Button variant="primary">Primary</Button>
       <Button variant="outline">Outline</Button>
       <Button variant="primary" isDisabled={true}>
