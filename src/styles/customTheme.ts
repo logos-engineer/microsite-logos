@@ -27,15 +27,52 @@ const customTheme = extendTheme({
   colors: {
     ...theme.colors,
     black: {
-      DEFAULT: "#121212",
+      primary: "#121212",
       active: "#14142B",
     },
-    blackBody: "#313131",
-    pink: "#EA1D76",
-    lightpink: "#F65097",
-    yellow: "#EEE938",
-    blue: "#67CFE3",
     white: "#FFFFFF",
+    gray: {
+      line: "#D9DBE9",
+    },
+    blackbody: "#313131",
+    pink: {
+      primary: "#EA1D76",
+      50: "#FAC5DC",
+      100: "#F8B2D1",
+      200: "#F48DBA",
+      300: "#F168A3",
+      400: "#ED428D",
+      500: "#EA1D76",
+      600: "#EA1D76",
+      700: "#9D0F4C",
+      800: "#730B38",
+      900: "#490723",
+    },
+    lightpink: "#F65097",
+    yellow: {
+      primary: "#EEE938",
+      50: "#FCFCE1",
+      100: "#FBFACE",
+      200: "#F8F5A9",
+      300: "#F4F183",
+      400: "#F1ED5E",
+      500: "#EEE938",
+      600: "#E5DF14",
+      700: "#BAB610",
+      800: "#908C0C",
+      900: "#666309",
+    },
+    blue: {
+      primary: "#67CFE3",
+      100: "#F1FBFC",
+      200: "#CEF0F6",
+      300: "#ACE5F0",
+      400: "#89DAE9",
+      500: "#67CFE3",
+      700: "#25AFC9",
+      800: "#1E8DA2",
+      900: "#176B7C",
+    },
   },
 
   fontSizes: {
@@ -97,6 +134,7 @@ const customTheme = extendTheme({
     Heading: {
       defaultProps: {
         variant: "h1",
+        color: "black.primary",
       },
       variants: {
         h1: {
@@ -121,7 +159,7 @@ const customTheme = extendTheme({
         },
         h5: {
           fontSize: "2xl",
-          lineHeight: "1.4",
+          lineHeight: "1.5",
           fontWeight: "semibold",
         },
         h6: {
@@ -131,12 +169,12 @@ const customTheme = extendTheme({
         },
         "mobile-h1": {
           fontSize: "3xl",
-          lineHeight: "42px",
-          fontWeight: "bolrd",
+          lineHeight: "1.4",
+          fontWeight: "bold",
         },
         "mobile-h2": {
           fontSize: "2xl",
-          lineHeight: "1.5",
+          lineHeight: "1.4",
           fontWeight: "semibold",
         },
         "mobile-h3": {
@@ -152,6 +190,7 @@ const customTheme = extendTheme({
         lineHeight: "1.5",
         letterSpacing: "0.5px",
         fontWeight: "normal",
+        color: "black.primary",
       },
       variants: {
         "3xl": {
@@ -187,7 +226,6 @@ const customTheme = extendTheme({
         sm: {
           fontSize: "sm",
           lineHeight: "1.5",
-
           fontWeight: "normal",
         },
         xs: {
@@ -195,15 +233,15 @@ const customTheme = extendTheme({
           lineHeight: "1.5",
           fontWeight: "normal",
         },
-        "mobile-lg": {
-          fontSize: "md",
+        "mobile-regular": {
+          fontSize: "xs",
           lineHeight: "1.5",
           fontWeight: "normal",
         },
         "mobile-semibold": {
-          fontSize: "md",
+          fontSize: "xs",
           lineHeight: "1.5",
-          fontWeight: "normal",
+          fontWeight: "semibold",
         },
         subtitle: {
           fontWeight: "semibold",
@@ -228,29 +266,31 @@ const customTheme = extendTheme({
       },
       variants: {
         primary: {
-          bg: "blue",
+          bg: "blue.primary",
           color: "white",
-          borderColor: "blue",
+          borderColor: "blue.primary",
           h: "auto",
           px: "32px",
           fontWeight: "medium",
           fontSize: "lg",
           lineHeight: "1.5",
           _hover: {
-            bg: "#2A69AC",
+            bg: "blue.400",
+            borderColor: "blue.400",
+            _disabled: {
+              bgColor: "blue.primary",
+              opacity: "0.4",
+            },
           },
 
           _disabled: {
             opacity: 0.4,
-            _hover: {
-              bg: "blue",
-            },
           },
         },
         outline: {
           bg: "transparant",
-          color: "blue",
-          borderColor: "white",
+          color: "blue.primary",
+          borderColor: "blue.primary",
           h: "auto",
           px: "32px",
           fontWeight: "medium",

@@ -1,4 +1,4 @@
-import { Box, Text, Button, Divider } from "@chakra-ui/react";
+import { Box, Text, Button, Divider, Flex } from "@chakra-ui/react";
 import {
   H1,
   H2,
@@ -46,6 +46,155 @@ export default function Styleguide() {
       <Button variant="outline" isDisabled={true}>
         Outline disable
       </Button>
+      <Divider />
+      <H1>Color</H1>
+      <H5>Black</H5>
+      <Flex p="5" gridGap="10">
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="black.primary"></Box>
+          <Text>Black Primary</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="black.active"></Box>
+          <Text>Black Active</Text>
+        </Box>
+      </Flex>
+      <H5>Gray</H5>
+      <Flex p="5" gridGap="10">
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="gray.line"></Box>
+          <Text>Gray line</Text>
+        </Box>
+      </Flex>
+      <H5>Pink</H5>
+      <Flex p="5" gridGap="10">
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="pink.primary"></Box>
+          <Text>Pink Primary</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="pink.100"></Box>
+          <Text>Pink 100</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="pink.200"></Box>
+          <Text>Pink 200</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="pink.300"></Box>
+          <Text>Pink 300</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="pink.400"></Box>
+          <Text>Pink 400</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="pink.500"></Box>
+          <Text>Pink 500</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="pink.600"></Box>
+          <Text>Pink 600</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="pink.700"></Box>
+          <Text>Pink 700</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="pink.800"></Box>
+          <Text>Pink 800</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="pink.900"></Box>
+          <Text>Pink 900</Text>
+        </Box>
+      </Flex>
+      <H5>yellow</H5>
+      <Flex p="5" gridGap="10">
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="yellow.primary"></Box>
+          <Text>yellow Primary</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="yellow.100"></Box>
+          <Text>yellow 100</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="yellow.200"></Box>
+          <Text>yellow 200</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="yellow.300"></Box>
+          <Text>yellow 300</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="yellow.400"></Box>
+          <Text>yellow 400</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="yellow.500"></Box>
+          <Text>yellow 500</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="yellow.600"></Box>
+          <Text>yellow 600</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="yellow.700"></Box>
+          <Text>yellow 700</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="yellow.800"></Box>
+          <Text>yellow 800</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="yellow.900"></Box>
+          <Text>yellow 900</Text>
+        </Box>
+      </Flex>
+      <H5>blue</H5>
+      <Flex p="5" gridGap="10">
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="blue.primary"></Box>
+          <Text>blue Primary</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="blue.100"></Box>
+          <Text>blue 100</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="blue.200"></Box>
+          <Text>blue 200</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="blue.300"></Box>
+          <Text>blue 300</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="blue.400"></Box>
+          <Text>blue 400</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="blue.500"></Box>
+          <Text>blue 500</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="blue.600"></Box>
+          <Text>blue 600</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="blue.700"></Box>
+          <Text>blue 700</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="blue.800"></Box>
+          <Text>blue 800</Text>
+        </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="blue.900"></Box>
+          <Text>blue 900</Text>
+        </Box>
+      </Flex>
     </Box>
   );
 }
