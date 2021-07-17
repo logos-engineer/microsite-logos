@@ -62,6 +62,10 @@ export default function Styleguide() {
           <Box w="20" h="20" display="block" bgColor="black.active"></Box>
           <Text>Black Active</Text>
         </Box>
+        <Box>
+          <Box w="20" h="20" display="block" bgColor="blackbody"></Box>
+          <Text>Black Body Text</Text>
+        </Box>
       </Flex>
       <H5>Gray</H5>
       <Flex p="5" gridGap="10">
