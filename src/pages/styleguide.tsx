@@ -1,4 +1,4 @@
-import { Box, Text, Button, Divider, Flex } from "@chakra-ui/react";
+import { Box, Text, Button, Divider, Flex, Heading } from "@chakra-ui/react";
 import {
   H1,
   H2,
@@ -10,9 +10,14 @@ import {
   MobileH2,
   MobileH3,
 } from "@/components/Heading";
+import Head from "next/head";
 export default function Styleguide() {
   return (
     <Box>
+      <Head>
+        <title>Styleguide </title>
+      </Head>
+      <Heading textColor="red">sss</Heading>
       <H1>Heading</H1>
       <H1>H1</H1>
       <H2>H2</H2>

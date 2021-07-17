@@ -132,9 +132,11 @@ const customTheme = extendTheme({
 
   components: {
     Heading: {
+      baseStyle: {
+        color: "black.primary",
+      },
       defaultProps: {
         variant: "h1",
-        color: "black.primary",
       },
       variants: {
         h1: {
