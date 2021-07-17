@@ -18,7 +18,7 @@ const Hero = () => {
       <Box
         mt="-100px"
         position="absolute"
-        bg="pink"
+        bg="pink.primary"
         zIndex="0"
         transform="skewY(5deg)"
         h="full"
