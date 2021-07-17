@@ -17,7 +17,6 @@ export default function Styleguide() {
       <Head>
         <title>Styleguide </title>
       </Head>
-      <Heading textColor="red">sss</Heading>
       <H1>Heading</H1>
       <H1>H1</H1>
       <H2>H2</H2>
