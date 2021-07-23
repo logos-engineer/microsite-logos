@@ -109,32 +109,27 @@ const customTheme = extendTheme({
     64: "16rem",
   },
   lineHeights: {
-    lineHeights: {
-      normal: "normal",
-      none: 1,
-      shorter: 1.25,
-      short: 1.375,
-      base: 1.5,
-      tall: 1.625,
-      taller: "2",
-      "3": ".75rem",
-      "4": "1rem",
-      "5": "1.25rem",
-      "6": "1.3rem", //130%
-      "7": "1.4rem", //140%
-      "8": "1.5rem", //150%
-      "9": "1.75rem",
-      "10": "2rem",
-      "11": "2.25rem",
-      "12": "2.5rem",
-    },
+    normal: "normal",
+    none: 1,
+    shorter: 1.25,
+    short: 1.375,
+    base: 1.5,
+    tall: 1.625,
+    taller: "2",
+    "3": ".75rem",
+    "4": "1rem",
+    "5": "1.25rem",
+    "6": "1.3rem", //130%
+    "7": "1.4rem", //140%
+    "8": "1.5rem", //150%
+    "9": "1.75rem",
+    "10": "2rem",
+    "11": "2.25rem",
+    "12": "2.5rem",
   },
 
   components: {
     Heading: {
-      baseStyle: {
-        color: "black.primary",
-      },
       defaultProps: {
         variant: "h1",
       },
@@ -187,19 +182,11 @@ const customTheme = extendTheme({
       },
     },
     Text: {
-      baseStyle: {
-        fontSize: "md",
-        lineHeight: "1.5",
-        letterSpacing: "0.5px",
-        fontWeight: "normal",
-        color: "black.primary",
-      },
       variants: {
         "3xl": {
           fontSize: "3xl",
           lineHeight: "1.4",
           letterSpacing: "0.005em",
-          fontWeight: "normal",
         },
         "2xl": {
           fontSize: "2xl",
@@ -211,34 +198,28 @@ const customTheme = extendTheme({
           fontSize: "xl",
           lineHeight: "1.5",
           letterSpacing: "0.5px",
-          fontWeight: "normal",
         },
         lg: {
           fontSize: "lg",
           lineHeight: "1.5",
           letterSpacing: "0.5px",
-          fontWeight: "normal",
         },
         md: {
           fontSize: "md",
           lineHeight: "1.5",
           letterSpacing: "0.5px",
-          fontWeight: "normal",
         },
         sm: {
           fontSize: "sm",
           lineHeight: "1.5",
-          fontWeight: "normal",
         },
         xs: {
           fontSize: "xs",
           lineHeight: "1.5",
-          fontWeight: "normal",
         },
         "mobile-regular": {
           fontSize: "xs",
           lineHeight: "1.5",
-          fontWeight: "normal",
         },
         "mobile-semibold": {
           fontSize: "xs",
