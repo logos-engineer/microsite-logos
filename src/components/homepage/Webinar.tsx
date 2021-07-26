@@ -74,11 +74,13 @@ export default function Webinar() {
         </GridItem>
         <GridItem colSpan={6} colStart={7}>
           <Heading variant="h3" as="h1" mb="5">
-            Opresi Driver dalam Kultur Kerja {"Gig Economy"} Startup Indonesia.
+            {
+              "Opresi Driver dalam Kultur Kerja 'Gig Economy' Startup Indonesia."
+            }
           </Heading>
           <Text mb="5">
-            Fenomena start up yang mengeksploitasi pekerjanya akhir-akhir ini
-            merupakan salah satu akibat buruk dari sistem {"Gig Economy"} Gi...
+            {`Fenomena start up yang mengeksploitasi pekerjanya akhir-akhir ini
+            merupakan salah satu akibat buruk dari sistem 'Gig Economy' Gi...`}
           </Text>
           <Button variant="primary">Daftar Webinar</Button>
         </GridItem>
