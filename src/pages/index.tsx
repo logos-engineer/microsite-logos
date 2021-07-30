@@ -1,6 +1,6 @@
 import Hero from "@/components/homepage/Hero";
 import Webinar from "@/components/homepage/Webinar";
-import Article from "@/components/homepage/Article";
+import Article from "@/components/homepage/Article/Article";
 import Layout from "@/components/layout";
 
 const Home = () => {
