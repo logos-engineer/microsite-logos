@@ -82,7 +82,7 @@ export default function Article() {
                   <TilesIllustrate />
                 </Box>
 
-                <Box position="absolute" bottom="14" left="0">
+                <Box position="absolute" bottom="16" left="0">
                   <SquareIllustrate />
                 </Box>
                 <Box position="absolute" pr="16">
