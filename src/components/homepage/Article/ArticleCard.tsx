@@ -3,8 +3,8 @@ import { Heading, Box, GridItem, Text, Button } from "@chakra-ui/react";
 import Image from "next/image";
 export default function ArticleCard() {
   return (
-    <Box w="full" display="grid" gridTemplateColumns="repeat(4,1fr)">
-      <GridItem colSpan={1}>
+    <Box w="full" display="grid" gridTemplateColumns="repeat(5,1fr)">
+      <GridItem colSpan={2}>
         <Box width="100%" height="100%">
           <Image
             src={require("@/public/img/Article1.png")}
@@ -18,7 +18,7 @@ export default function ArticleCard() {
       </GridItem>
       <GridItem
         boxSizing="border-box"
-        colStart={2}
+        colStart={3}
         colSpan={3}
         bgColor="white"
         display="flex"

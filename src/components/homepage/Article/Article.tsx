@@ -63,7 +63,7 @@ export default function Article() {
                 <Button variant="primary">Visit Out Website</Button>
               </Box>
 
-              <VStack py="14" position="relative" spacing="5">
+              <VStack py="14" position="relative" spacing="10">
                 <ArticleCard />
                 <ArticleCard />
               </VStack>
