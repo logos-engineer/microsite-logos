@@ -59,24 +59,19 @@ const Hero = () => {
             justifyContent="center"
           >
             <Box position="relative">
-              <SquareIllustrate />
-              <Heading
-                variant="h1"
-                as="h1"
-                color="white"
-                position="absolute"
-                top="0"
-                left="5"
-              >
+              <Heading variant="h1" as="h1" color="white">
                 Logos ID
               </Heading>
             </Box>
-            <Text variant="lg" color="white" mt="10px" w="md" ml="5">
+            <Text variant="lg" color="white" mt="10px" w="xl">
               Tempat diskusi dan edukasi Filsafat, Sosiologi, Politik, Sejarah,
               Pop Culture, dan Sains.
             </Text>
-            <HStack spacing="24px" mt="32px" ml="5">
-              <Button variant="primary">Support Us</Button>
+            <HStack spacing="24px" mt="32px">
+              <Button variant="primary">Daftar Webinar</Button>
+              <Button variant="outline" borderColor="white" color="white">
+                Support Us
+              </Button>
             </HStack>
           </GridItem>
           <GridItem colSpan={5} colEnd={13}>

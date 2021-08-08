@@ -244,8 +244,7 @@ const customTheme = extendTheme({
     Button: {
       baseStyle: {
         borderRadius: "6px",
-        py: "16px",
-        border: "1px",
+        py: "12px",
       },
       variants: {
         primary: {
@@ -255,7 +254,7 @@ const customTheme = extendTheme({
           h: "auto",
           px: "32px",
           fontWeight: "medium",
-          fontSize: "lg",
+          fontSize: "md",
           lineHeight: "1.5",
           _hover: {
             bg: "blue.400",
@@ -272,15 +271,16 @@ const customTheme = extendTheme({
         },
         outline: {
           bg: "transparant",
+          borderWidth: "2px",
           color: "blue.primary",
           borderColor: "blue.primary",
           h: "auto",
           px: "32px",
           fontWeight: "medium",
-          fontSize: "lg",
+          fontSize: "md",
           lineHeight: "1.5",
           _hover: {
-            bg: "gray.100",
+            bg: "blue.primary",
           },
           _disabled: {
             opacity: 0.4,
