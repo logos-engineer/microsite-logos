@@ -1,4 +1,12 @@
-import { Container, Heading, Box, Grid, GridItem } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  Box,
+  Grid,
+  GridItem,
+  VStack,
+  Button,
+} from "@chakra-ui/react";
 import ArticleCard from "./ArticleCard";
 import IllustrateTiles from "@/public/img/Illustrate tiles.png";
 import Image from "next/image";
@@ -38,8 +46,8 @@ const TilesIllustrate = () => {
 export default function Article() {
   return (
     <Box width="full" mt="44" mb="24">
-      <Grid templateColumns="repeat(15,1fr)" width="full">
-        <GridItem colSpan={14}>
+      <Grid templateColumns="repeat(12,1fr)" width="full">
+        <GridItem colSpan={11} display="grid">
           <Box
             w="full"
             bgColor="#F5F6F8"
@@ -47,49 +55,18 @@ export default function Article() {
             borderRightRadius="32px"
             position="relative"
           >
-            <Container position="relative" pl="10">
-              <Box>
-                <Box
-                  width="217px"
-                  height="195px"
-                  position="absolute"
-                  zIndex="0"
-                  top="-20"
-                >
-                  <TilesIllustrate />
-                </Box>
-                <Heading
-                  variant="h2"
-                  as="h1"
-                  position="absolute"
-                  zIndex="20"
-                  top="-9"
-                  left="14"
-                >
+            <Container position="relative" pl="16">
+              <Box marginY="-8" display="flex">
+                <Heading variant="h2" as="h1" zIndex="20" flexGrow={1}>
                   Our Latest Articles
                 </Heading>
+                <Button variant="primary">Visit Out Website</Button>
               </Box>
 
-              <Box py="14" pl="5" position="relative" minHeight="190vh">
-                <Box
-                  width="217px"
-                  height="195px"
-                  position="absolute"
-                  zIndex="0"
-                  right="-16"
-                  top="-10"
-                >
-                  <TilesIllustrate />
-                </Box>
-
-                <Box position="absolute" bottom="16" left="0">
-                  <SquareIllustrate />
-                </Box>
-                <Box position="absolute" pr="16">
-                  <ArticleCard />
-                  <ArticleCard variant="image-right" />
-                </Box>
-              </Box>
+              <VStack py="14" position="relative" spacing="5">
+                <ArticleCard />
+                <ArticleCard />
+              </VStack>
             </Container>
           </Box>
         </GridItem>

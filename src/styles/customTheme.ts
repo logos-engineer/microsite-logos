@@ -256,6 +256,8 @@ const customTheme = extendTheme({
           fontWeight: "medium",
           fontSize: "md",
           lineHeight: "1.5",
+          borderWidth: "2px",
+
           _hover: {
             bg: "blue.400",
             borderColor: "blue.400",
