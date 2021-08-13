@@ -47,15 +47,16 @@ export default function Article() {
   return (
     <Box width="full" mt="44" mb="24">
       <Grid templateColumns="repeat(12,1fr)" width="full">
-        <GridItem colSpan={11} display="grid">
+        <GridItem colSpan={12} display="grid">
           <Box
             w="full"
             bgColor="#F5F6F8"
             display="flex"
             borderRightRadius="32px"
             position="relative"
+            className="articleSection"
           >
-            <Container position="relative" pl="16">
+            <Container position="relative">
               <Box marginY="-8" display="flex">
                 <Heading variant="h2" as="h1" zIndex="20" flexGrow={1}>
                   Our Latest Articles
