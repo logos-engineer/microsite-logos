@@ -27,7 +27,7 @@ const Footer = () => {
               Tertarik untuk Partnership?
             </Heading>
             <Text variant="2xl" color="white" mt="16px">
-              (Deskripsi partnership)
+              Please contact us through this button below.
             </Text>
             <HStack spacing="24px" mt="32px">
               <Button variant="primary">Visit Our Website</Button>
