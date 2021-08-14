@@ -8,63 +8,65 @@ import {
   Box,
   Image as ChakraImage,
   useBreakpointValue,
+  VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import ImageWebinar from "@/public/img/image-webinar.png";
 
 export default function Webinar() {
   const variantTitle = useBreakpointValue({ base: "mobile-h3", lg: "h3" });
+  const variantDescription = useBreakpointValue({
+    base: "xs",
+    md: "sm",
+    lg: "lg",
+  });
   const variantSizeButton = useBreakpointValue({ base: "xs", sm: "md" });
   return (
-    <Container mb="20" mt={{ base: "50px", sm: "0" }}>
+    <Container mb="20" mt={{ base: "50px", lg: "0" }}>
       <Grid
         display="grid"
         templateColumns="repeat(12,1fr)"
-        gap={{ base: "10px", lg: "30px" }}
+        gap={{ base: "10px", sm: "40px" }}
         position="relative"
         alignItems="center"
       >
-        <GridItem
-          colSpan={6}
-          position="relative"
-          d="flex"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Box
-            width={{ base: "165px", md: "250px", lg: "461px" }}
-            height={{ base: "165px", md: "250px", lg: "461px" }}
-            zIndex="4"
-            position="relative"
-          >
-            <ChakraImage
-              src="/img/ornament/square-webinar.svg"
-              w="217px"
-              h="195px"
-              position="absolute"
-              top="-7%"
-              left="-10%"
-              d={{ base: "none", lg: "block" }}
-            />
+        <GridItem colSpan={5} position="relative">
+          <Box top="7" left="5" width="100%" height="100%" zIndex="20">
             <Image
               src={ImageWebinar}
+              width={416}
+              height={416}
               alt="Webinar Poster"
               placeholder="blur"
-              layout="fill"
+              layout="responsive"
               objectFit="cover"
             />
           </Box>
         </GridItem>
-        <GridItem colSpan={6} colStart={7}>
-          <Heading variant={variantTitle} as="h1" mb="5">
+        <GridItem colSpan={7} colStart={6}>
+          <Heading
+            variant={variantTitle}
+            as="h1"
+            mb={{ base: "10px", sm: "10px", lg: "10px" }}
+          >
             {
               "Opresi Driver dalam Kultur Kerja 'Gig Economy' Startup Indonesia."
             }
           </Heading>
-          <Text mb="5" d={{ base: "none", lg: "block" }}>
-            {`Fenomena start up yang mengeksploitasi pekerjanya akhir-akhir ini
-            merupakan salah satu akibat buruk dari sistem 'Gig Economy' Gi...`}
-          </Text>
+
+          <VStack
+            d={{ base: "none", md: "flex" }}
+            mb={{ base: "10px", sm: "20px", lg: "10px" }}
+            spacing="3"
+          >
+            <Text variant={variantDescription}>
+              {`Fenomena start up yang mengeksploitasi pekerjanya akhir-akhir ini merupakan salah satu akibat buruk dari sistem "Gig Economy"`}
+            </Text>
+            <Text variant={variantDescription}>
+              {`Gig Economy adalah suatu kondisi di mana terjadi pergeseran status pekerja, dari permanen menjadi karyawan tidak tetap.`}
+            </Text>
+          </VStack>
+
           <Button variant="primary" size={variantSizeButton}>
             Daftar Webinar
           </Button>

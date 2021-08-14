@@ -247,6 +247,7 @@ const customTheme = extendTheme({
     Button: {
       baseStyle: {
         borderRadius: "6px",
+
         border: "1px",
       },
       variants: {
@@ -270,11 +271,12 @@ const customTheme = extendTheme({
         },
         outline: {
           bg: "transparant",
+          borderWidth: "2px",
           color: "blue.primary",
           borderColor: "blue.primary",
           h: "auto",
           _hover: {
-            bg: "gray.100",
+            bg: "blue.primary",
           },
           _disabled: {
             opacity: 0.4,

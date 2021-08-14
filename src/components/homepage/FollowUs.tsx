@@ -8,8 +8,8 @@ import AccessibleLink from "@/components/AccessibleLink";
 
 const FollowUs = () => {
   return (
-    <VStack spacing="64px">
-      <Heading variant="h1" as="h1" color="pink.primary">
+    <VStack spacing="64px" as="section" mb="140px">
+      <Heading variant="h1" as="h1" color="black.primary">
         Follow Us
       </Heading>
       <HStack minW="555px" spacing="111px">

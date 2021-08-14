@@ -1,41 +1,51 @@
 import { Heading, Box, GridItem, Text, Button } from "@chakra-ui/react";
 
-interface Props {
-  variant?: "image-left" | "image-right";
-}
 import Image from "next/image";
-export default function ArticleCard({ variant = "image-left" }: Props) {
+export default function ArticleCard() {
   return (
-    <Box w="full" display="grid" gridTemplateColumns="repeat(2,1fr)">
-      <GridItem colSpan={1} order={variant === "image-left" ? 1 : 2}>
-        <Image
-          src={require("@/public/img/Article1.png")}
-          width={480}
-          height={480}
-          alt="articlePage"
-          layout="responsive"
-        />
+    <Box w="full" display="grid" gridTemplateColumns="repeat(5,1fr)">
+      <GridItem colSpan={2}>
+        <Box width="100%" height="100%">
+          <Image
+            src={require("@/public/img/Article1.png")}
+            width={360}
+            height={352}
+            alt="articlePage"
+            placeholder="blur"
+            layout="responsive"
+          />
+        </Box>
       </GridItem>
       <GridItem
-        colSpan={1}
+        boxSizing="border-box"
+        colStart={3}
+        colSpan={3}
         bgColor="white"
-        p="14"
         display="flex"
         flexDir="column"
         justifyContent="center"
+        py="2"
+        px="4"
         gridGap="5"
-        order={variant === "image-right" ? 1 : 2}
-        borderTopRightRadius={variant === "image-left" ? "32px" : "0"}
-        borderBottomLeftRadius={variant === "image-right" ? "32px" : "0"}
+        borderRightRadius="3xl"
       >
         <Heading as="h2" variant="h4" fontWeight="bold">
           A Feminism History Recap: The First Wave of Feminism
         </Heading>
         <Text>
           What is feminism? Arguably for most, the meaning of feminism is still
-          dependent on the eyes of the beholder...
+          dependent on the eyes of the beholder. Different sides are
+          contributing their voices to both the feminist movement and the
+          opposition of such moveme...
         </Text>
-        <Button variant="outline" w="max-content">
+        <Button
+          variant="outline"
+          w="max-content"
+          _hover={{
+            color: "white",
+            bg: "blue.400",
+          }}
+        >
           Read More
         </Button>
       </GridItem>
