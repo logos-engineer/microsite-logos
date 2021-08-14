@@ -1,7 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
-
 import Footer from "./Footer";
 import Meta from "./Meta";
 
@@ -14,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
     <Box w="full">
       <Meta />
       {children}
-      <Footer/>
+      <Footer />
     </Box>
   );
 };
