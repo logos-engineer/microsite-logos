@@ -65,6 +65,7 @@ const Hero = () => {
             flexDir="column"
             justifyContent="center"
           >
+
             <Heading
               variant={variantTitle}
               as="h1"
@@ -107,6 +108,7 @@ const Hero = () => {
                   Support Us
                 </Button>
               </Link>
+
             </HStack>
           </GridItem>
           <GridItem

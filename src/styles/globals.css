@@ -1,1 +1,28 @@
 /* Global Styling here */
+.articleSection {
+  content: " ";
+  position: relative;
+  background-color: black;
+}
+
+.articleSection::before {
+  position: absolute;
+  display: block;
+  width: 217px;
+  height: 193px;
+  background-image: url("../../public/pattern/dotpattern.svg");
+  content: " ";
+  top: -50px;
+  left: 50px;
+}
+
+.articleSection > div::before {
+  position: absolute;
+  display: block;
+  width: 155px;
+  height: 155px;
+  background-image: url("../../public/pattern/linepattern.svg");
+  content: " ";
+  bottom: 30px;
+  right: 0;
+}

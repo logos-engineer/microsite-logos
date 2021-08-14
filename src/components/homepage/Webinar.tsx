@@ -6,6 +6,7 @@ import {
   Heading,
   Button,
   Box,
+  VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import ImageWebinar from "@/public/img/Image Webinar.png";
@@ -36,52 +37,42 @@ export default function Webinar() {
       <Grid
         display="grid"
         templateColumns="repeat(12,1fr)"
-        gap="30px"
+        gap="40px"
         position="relative"
         alignItems="center"
       >
-        <GridItem colSpan={6} position="relative" h="512px">
-          <Box width="217px" height="195px">
-            <Image
-              src={IllustrateTiles}
-              width={217}
-              height={195}
-              alt="Illustration tiles"
-              placeholder="blur"
-              layout="responsive"
-            />
-          </Box>
-          <Box
-            position="absolute"
-            top="7"
-            left="5"
-            width="512px"
-            height="512px"
-            zIndex="20"
-          >
+        <GridItem colSpan={5} position="relative">
+          <Box top="7" left="5" width="100%" height="100%" zIndex="20">
             <Image
               src={ImageWebinar}
-              width={512}
-              height={512}
+              width={416}
+              height={416}
               alt="Webinar Poster"
               placeholder="blur"
               layout="responsive"
             />
           </Box>
-          <Box position="absolute" zIndex="10" bottom="-16" right="-10">
-            <StarIllustration />
-          </Box>
         </GridItem>
-        <GridItem colSpan={6} colStart={7}>
-          <Heading variant="h3" as="h1" mb="5">
+        <GridItem colSpan={7} colStart={6}>
+          <Heading variant="h3" as="h1" mb="10">
             {
               "Opresi Driver dalam Kultur Kerja 'Gig Economy' Startup Indonesia."
             }
           </Heading>
-          <Text mb="5">
-            {`Fenomena start up yang mengeksploitasi pekerjanya akhir-akhir ini
-            merupakan salah satu akibat buruk dari sistem 'Gig Economy' Gi...`}
-          </Text>
+
+          <VStack mb="10" spacing="3">
+            <Text>
+              {`Fenomena start up yang mengeksploitasi pekerjanya akhir-akhir ini merupakan salah satu akibat buruk dari sistem "Gig Economy"`}
+            </Text>
+            <Text>
+              {`Gig Economy adalah suatu kondisi di mana terjadi pergeseran status pekerja, dari permanen menjadi karyawan tidak tetap.`}
+            </Text>
+
+            <Text>
+              {`Sabtu ini, Logos akan mengadakan Webinar dengan tema : "Opresi Driver dalam Kultur Kerja 'Gig Economy' Startup Indonesia." Penasaran kan apa saja yang akan dibahas? Yuk, buruan langsung...`}
+            </Text>
+          </VStack>
+
           <Button variant="primary">Daftar Webinar</Button>
         </GridItem>
       </Grid>
