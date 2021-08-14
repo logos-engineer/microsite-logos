@@ -40,7 +40,7 @@ const Hero = () => {
   return (
     <Box w="full" position="relative">
       <Box
-        mt="-100px"
+        mt={{ base: "0", lg: "-100px" }}
         position="absolute"
         bg="pink.primary"
         zIndex="0"
@@ -50,7 +50,7 @@ const Hero = () => {
       ></Box>
       <Container
         pt={{ base: "20px", lg: "50px" }}
-        pb={{ base: "130px", sm: "140px", lg: "194px" }}
+        pb={{ base: "30px", sm: "140px", lg: "194px" }}
       >
         <Grid
           templateColumns="repeat(12,1fr)"
