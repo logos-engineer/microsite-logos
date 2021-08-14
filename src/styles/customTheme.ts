@@ -249,7 +249,6 @@ const customTheme = extendTheme({
         borderRadius: "6px",
 
         border: "1px",
-
       },
       variants: {
         primary: {
@@ -285,6 +284,13 @@ const customTheme = extendTheme({
         },
       },
       sizes: {
+        xs: {
+          px: "24px",
+          py: "8px",
+          lineHeight: "1.5",
+          fontSize: "xs",
+          fontWeight: "medium",
+        },
         md: {
           px: "32px",
           py: "12px",
