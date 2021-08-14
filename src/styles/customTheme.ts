@@ -1,4 +1,4 @@
-import { theme, extendTheme } from "@chakra-ui/react";
+import { theme, extendTheme, ThemeConfig } from "@chakra-ui/react";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 import "@fontsource/poppins/300.css";
 import "@fontsource/poppins/400.css";
@@ -14,11 +14,13 @@ const breakpoints = createBreakpoints({
   "2xl": "1536px",
 });
 
+const config: ThemeConfig = {
+  initialColorMode: "light",
+  useSystemColorMode: false,
+};
+
 const customTheme = extendTheme({
-  config: {
-    initialColorMode: "light",
-    useSystemColorMode: false,
-  },
+  config,
   fonts: {
     ...theme.fonts,
     body: "Poppins, sans-serif",
@@ -69,6 +71,7 @@ const customTheme = extendTheme({
       300: "#ACE5F0",
       400: "#89DAE9",
       500: "#67CFE3",
+      600: "#40C3DC",
       700: "#25AFC9",
       800: "#1E8DA2",
       900: "#176B7C",
@@ -245,6 +248,7 @@ const customTheme = extendTheme({
       baseStyle: {
         borderRadius: "6px",
         py: "12px",
+        border: "1px",
       },
       variants: {
         primary: {
@@ -289,8 +293,18 @@ const customTheme = extendTheme({
           },
         },
       },
+      sizes: {
+        md: {
+          px: "32px",
+          py: "12px",
+          lineHeight: "1.5",
+          fontSize: "md",
+          fontWeight: "medium",
+        },
+      },
       defaultProps: {
         variant: "primary",
+        size: "md",
       },
     },
     Container: {
