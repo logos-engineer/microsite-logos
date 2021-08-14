@@ -54,9 +54,10 @@ export default function Article() {
             display="flex"
             borderRightRadius="32px"
             position="relative"
-            className="articleSection"
           >
             <Container position="relative">
+              <Box className="article-tiles"></Box>
+              <Box className="article-line"></Box>
               <Box marginY="-8" display="flex">
                 <Heading variant="h2" as="h1" zIndex="20" flexGrow={1}>
                   Our Latest Articles

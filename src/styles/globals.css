@@ -1,11 +1,6 @@
 /* Global Styling here */
-.articleSection {
-  content: " ";
-  position: relative;
-  background-color: black;
-}
 
-.articleSection::before {
+.article-tiles::before {
   position: absolute;
   display: block;
   width: 217px;
@@ -13,10 +8,10 @@
   background-image: url("../../public/pattern/dotpattern.svg");
   content: " ";
   top: -50px;
-  left: 50px;
+  left: -50px;
 }
 
-.articleSection > div::before {
+.article-line::after {
   position: absolute;
   display: block;
   width: 155px;
@@ -24,5 +19,5 @@
   background-image: url("../../public/pattern/linepattern.svg");
   content: " ";
   bottom: 30px;
-  right: 0;
+  right: -10px;
 }
