@@ -1,7 +1,7 @@
 import { VStack, HStack, Heading } from "@chakra-ui/react";
 import Image from "next/image";
 import instagram from "@/public/icon/instagram.svg";
-import spotify from "@/public/icon/Spotify.svg";
+import spotify from "@/public/icon/spotify.svg";
 import twitter from "@/public/icon/twitter.svg";
 import youtube from "@/public/icon/youtube.svg";
 import AccessibleLink from "@/components/AccessibleLink";
