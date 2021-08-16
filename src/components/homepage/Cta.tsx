@@ -8,13 +8,11 @@ import {
   Image,
   VStack,
 } from "@chakra-ui/react";
-// import Image from "next/image";
-import logos from "@/public/img/logos_component.svg";
-import topography from "@/public/pattern/topography.svg";
+import AccessibleLink from "../AccessibleLink";
 
 const Cta = () => {
   return (
-    <Box width="full">
+    <Box width="full" as="section">
       <Box
         m="140px auto"
         h="288px"
@@ -37,7 +35,12 @@ const Cta = () => {
                 >
                   Dukung kami untuk jadi Logos yang lebih baik
                 </Text>
-                <Button>Support Us</Button>
+                <AccessibleLink
+                  href="https://karyakarsa.com/logos_id"
+                  isExternal
+                >
+                  <Button>Support Us</Button>
+                </AccessibleLink>
               </VStack>
             </GridItem>
             <GridItem colSpan={6} position="relative">
