@@ -6,6 +6,7 @@ import {
   GridItem,
   VStack,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import ArticleCard from "./ArticleCard";
 
@@ -50,7 +51,9 @@ export default function Article() {
                 <Heading variant="h2" as="h1" zIndex="20" flexGrow={1}>
                   Our Latest Articles
                 </Heading>
-                <Button variant="primary">Visit Out Website</Button>
+                <Link href="https://logosid.xyz" role="link" isExternal>
+                  <Button variant="primary">Visit Our Website</Button>
+                </Link>
               </Box>
 
               <VStack py="14" position="relative" spacing="10">
