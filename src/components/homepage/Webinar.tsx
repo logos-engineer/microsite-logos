@@ -9,6 +9,7 @@ import {
   Image as ChakraImage,
   useBreakpointValue,
   VStack,
+  Link,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import ImageWebinar from "@/public/img/image-webinar.png";
@@ -66,10 +67,11 @@ export default function Webinar() {
               {`Gig Economy adalah suatu kondisi di mana terjadi pergeseran status pekerja, dari permanen menjadi karyawan tidak tetap.`}
             </Text>
           </VStack>
-
-          <Button variant="primary" size={variantSizeButton}>
-            Daftar Webinar
-          </Button>
+          <Link href="https://lynk.id/logos_id" role="link" isExternal>
+            <Button variant="primary" size={variantSizeButton}>
+              Daftar Webinar
+            </Button>
+          </Link>
         </GridItem>
       </Grid>
     </Container>

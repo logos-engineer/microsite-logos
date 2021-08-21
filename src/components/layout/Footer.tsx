@@ -7,6 +7,7 @@ import {
   Text,
   HStack,
   Button,
+  Link,
 } from "@chakra-ui/react";
 
 const Footer = () => {
@@ -30,10 +31,28 @@ const Footer = () => {
               Please contact us through this button below.
             </Text>
             <HStack spacing="24px" mt="32px">
-              <Button variant="primary">Visit Our Website</Button>
+              <Link role="link" href="https://logosid.xyz" isExternal>
+                <Button variant="primary">Visit Our Website</Button>
+              </Link>
             </HStack>
           </GridItem>
         </Grid>
+      </Container>
+      <Container position="relative" zIndex="3" py={4} centerContent>
+        <HStack>
+          <Text variant="lg" color="white">
+            &copy; 2021. Made with ❤ by
+          </Text>
+          <Link
+            href="https://github.com/logos-engineer/microsite-logos"
+            isExternal
+            role="link"
+          >
+            <Text variant="lg" color="white">
+              Logos Engineer
+            </Text>
+          </Link>
+        </HStack>
       </Container>
     </Box>
   );
