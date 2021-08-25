@@ -7,7 +7,7 @@ import Youtube from "../icons/Youtube";
 
 const FollowUs = () => {
   return (
-    <VStack spacing="64px" as="section" mb="140px">
+    <VStack spacing="64px" as="section" mb="140px" id="sosial-media">
       <Heading variant="h1" as="h1" color="black.primary">
         Follow Us
       </Heading>

@@ -12,7 +12,7 @@ import {
 
 const Footer = () => {
   return (
-    <Box w="full" position="relative">
+    <Box w="full" position="relative" as="footer">
       <Box
         position="absolute"
         bg="pink.primary"

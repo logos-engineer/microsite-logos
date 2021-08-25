@@ -12,7 +12,7 @@ import ArticleCard from "./ArticleCard";
 
 export default function Article() {
   return (
-    <Box width="full" mt="44" mb="24">
+    <Box width="full" mt="44" mb="24" as="section" id="artikel">
       <Grid templateColumns="repeat(12,1fr)" width="full">
         <GridItem colSpan={12} display="grid">
           <Box
