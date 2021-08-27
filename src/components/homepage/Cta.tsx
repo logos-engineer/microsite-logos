@@ -12,7 +12,7 @@ import AccessibleLink from "../AccessibleLink";
 
 const Cta = () => {
   return (
-    <Box width="full" as="section">
+    <Box width="full" as="section" id="support">
       <Box
         m="140px auto"
         h="288px"

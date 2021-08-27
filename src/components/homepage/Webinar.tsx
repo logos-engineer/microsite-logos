@@ -23,7 +23,7 @@ export default function Webinar() {
   });
   const variantSizeButton = useBreakpointValue({ base: "xs", sm: "md" });
   return (
-    <Container mb="20" mt={{ base: "50px", lg: "0" }}>
+    <Container mb="20" mt={{ base: "50px", lg: "0" }} as="section" id="webinar">
       <Grid
         display="grid"
         templateColumns="repeat(12,1fr)"
