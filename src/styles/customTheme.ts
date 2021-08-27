@@ -182,6 +182,11 @@ const customTheme = extendTheme({
           lineHeight: "1.5",
           fontWeight: "semibold",
         },
+        subtitle2: {
+          fontWeight: "semibold",
+          fontSize: "md",
+          lineHeight: "1.5",
+        },
       },
     },
     Text: {

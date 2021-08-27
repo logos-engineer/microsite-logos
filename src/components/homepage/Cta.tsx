@@ -18,7 +18,8 @@ const Cta = () => {
       <Box
         m="140px auto"
         h="288px"
-        w="1155px"
+        w="full"
+        maxW="container.xl"
         bg="pink.primary"
         borderRadius="16px"
         overflow="hidden"
