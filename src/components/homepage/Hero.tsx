@@ -38,7 +38,7 @@ const Hero = () => {
   const variantSubtitle = useBreakpointValue({ base: "md", lg: "lg" });
 
   return (
-    <Box w="full" position="relative">
+    <Box w="full" position="relative" as="section" id="hero">
       <Box
         mt={{ base: "0", lg: "-100px" }}
         position="absolute"
