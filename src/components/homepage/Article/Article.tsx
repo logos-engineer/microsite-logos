@@ -9,8 +9,13 @@ import {
   Link,
 } from "@chakra-ui/react";
 import ArticleCard from "./ArticleCard";
+import { wpArticle } from "@/types/wp";
+import { fetcher } from "../../../utils/utils";
+import useSWR from "swr";
 
 export default function Article() {
+  const { data, error } = useSWR<wpArticle[]>("/api/wp-article", fetcher);
+
   return (
     <Box width="full" mt="44" mb="24" as="section" id="artikel">
       <Grid templateColumns="repeat(12,1fr)" width="full">
@@ -57,8 +62,9 @@ export default function Article() {
               </Box>
 
               <VStack py="14" position="relative" spacing="10">
-                <ArticleCard />
-                <ArticleCard />
+                {data?.map((article) => (
+                  <ArticleCard key={article.id} data={article} />
+                ))}
               </VStack>
             </Container>
           </Box>

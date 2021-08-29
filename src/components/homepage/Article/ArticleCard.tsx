@@ -1,17 +1,24 @@
 import { Heading, Box, GridItem, Text, Button } from "@chakra-ui/react";
-
 import Image from "next/image";
-export default function ArticleCard() {
+import { wpArticle } from "@/types/wp";
+import Link from "next/link";
+
+interface Props {
+  data: wpArticle;
+}
+
+export default function ArticleCard({ data }: Props) {
+  const imageURL = data._embedded["wp:featuredmedia"][0].source_url;
   return (
     <Box w="full" display="grid" gridTemplateColumns="repeat(5,1fr)">
       <GridItem colSpan={2}>
         <Box width="100%" height="100%">
           <Image
-            src={require("@/public/img/Article1.png")}
+            src={imageURL}
             width={360}
             height={352}
             alt="articlePage"
-            placeholder="blur"
+            placeholder="empty"
             layout="responsive"
           />
         </Box>
@@ -30,24 +37,24 @@ export default function ArticleCard() {
         borderRightRadius="3xl"
       >
         <Heading as="h2" variant="h4" fontWeight="bold">
-          A Feminism History Recap: The First Wave of Feminism
+          {data.title.rendered}
         </Heading>
-        <Text>
-          What is feminism? Arguably for most, the meaning of feminism is still
-          dependent on the eyes of the beholder. Different sides are
-          contributing their voices to both the feminist movement and the
-          opposition of such moveme...
-        </Text>
-        <Button
-          variant="outline"
-          w="max-content"
-          _hover={{
-            color: "white",
-            bg: "blue.400",
-          }}
-        >
-          Read More
-        </Button>
+        <Text dangerouslySetInnerHTML={{ __html: data.excerpt.rendered }} />
+        <Link href={data.link} passHref>
+          <a target="_blank" rel="noopener noreferrer">
+            <Button
+              aria-label={"read more " + data.title.rendered}
+              variant="outline"
+              w="max-content"
+              _hover={{
+                color: "white",
+                bg: "blue.400",
+              }}
+            >
+              Read More
+            </Button>
+          </a>
+        </Link>
       </GridItem>
     </Box>
   );
