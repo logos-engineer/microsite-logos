@@ -17,7 +17,10 @@ export default function ArticleCard({ data }: Props) {
             src={imageURL}
             width={360}
             height={352}
-            alt="articlePage"
+            alt={data._embedded["wp:featuredmedia"][0].slug.replaceAll(
+              "-",
+              " "
+            )}
             placeholder="empty"
             layout="responsive"
           />
