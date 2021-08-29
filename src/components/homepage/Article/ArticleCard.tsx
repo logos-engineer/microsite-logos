@@ -44,7 +44,11 @@ export default function ArticleCard({ data }: Props) {
         </Heading>
         <Text dangerouslySetInnerHTML={{ __html: data.excerpt.rendered }} />
         <Link href={data.link} passHref>
-          <a target="_blank" rel="noopener noreferrer">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={"baca " + data.title.rendered}
+          >
             <Button
               aria-label={"read more " + data.title.rendered}
               variant="outline"
