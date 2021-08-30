@@ -24,7 +24,13 @@ export default function Article() {
     }
   }, [mediaQuery]);
   return (
-    <Box width="full" mt="44" mb="24" as="section" id="article">
+    <Box
+      width="full"
+      mt={{ base: "44px", lg: "44" }}
+      mb={{ base: "24px", lg: "24" }}
+      as="section"
+      id="article"
+    >
       <Grid templateColumns="repeat(12,1fr)" width="full">
         <GridItem colSpan={12} display="grid">
           <Box

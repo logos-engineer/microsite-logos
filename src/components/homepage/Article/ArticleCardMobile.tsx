@@ -20,6 +20,7 @@ const ArticleCardMobile = ({
     <AspectRatio
       ratio={2 / 1}
       position="relative"
+      zIndex="1"
       borderRadius="12px"
       bg={`url(${imageBg})`}
       bgSize="cover"
