@@ -7,6 +7,7 @@ import {
   VStack,
   Button,
   Link,
+  Skeleton,
 } from "@chakra-ui/react";
 import ArticleCard from "./ArticleCard";
 import { wpArticle } from "@/types/wp";
@@ -61,11 +62,13 @@ export default function Article() {
                 </Link>
               </Box>
 
-              <VStack py="14" position="relative" spacing="10">
-                {data?.map((article) => (
-                  <ArticleCard key={article.id} data={article} />
-                ))}
-              </VStack>
+              <Skeleton isLoaded={data ? true : false} minH="1000px" w="100%">
+                <VStack py="14" position="relative" spacing="10">
+                  {data?.map((article) => (
+                    <ArticleCard key={article.id} data={article} />
+                  ))}
+                </VStack>
+              </Skeleton>
             </Container>
           </Box>
         </GridItem>
