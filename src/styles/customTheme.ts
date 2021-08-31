@@ -182,6 +182,11 @@ const customTheme = extendTheme({
           lineHeight: "1.5",
           fontWeight: "semibold",
         },
+        subtitle2: {
+          fontWeight: "semibold",
+          fontSize: "md",
+          lineHeight: "1.5",
+        },
       },
     },
     Text: {
@@ -247,8 +252,6 @@ const customTheme = extendTheme({
     Button: {
       baseStyle: {
         borderRadius: "6px",
-        py: "12px",
-
         border: "1px",
       },
       variants: {
@@ -257,12 +260,9 @@ const customTheme = extendTheme({
           color: "white",
           borderColor: "blue.primary",
           h: "auto",
-          px: "32px",
           fontWeight: "medium",
-          fontSize: "md",
           lineHeight: "1.5",
           borderWidth: "2px",
-
           _hover: {
             bg: "blue.400",
             borderColor: "blue.400",
@@ -282,10 +282,8 @@ const customTheme = extendTheme({
           color: "blue.primary",
           borderColor: "blue.primary",
           h: "auto",
-          px: "32px",
           fontWeight: "medium",
-          fontSize: "md",
-          lineHeight: "1.5",
+
           _hover: {
             bg: "blue.primary",
           },

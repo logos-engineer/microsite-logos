@@ -20,6 +20,7 @@ const AccessibleLink = ({
         isExternal={isExternal}
         role={role}
         aria-label={props["aria-label"]}
+        {...props}
       >
         {children}
       </ChakraLink>
