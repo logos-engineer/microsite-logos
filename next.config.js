@@ -1,6 +1,9 @@
 const withPWA = require("next-pwa");
 
 module.exports = withPWA({
+  images: {
+    domains: ["logosid.xyz"],
+  },
   pwa: {
     disable:
       process.env.NODE_ENV === "development" ||

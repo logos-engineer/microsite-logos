@@ -6,23 +6,31 @@ import {
   GridItem,
   VStack,
   Button,
-  useMediaQuery,
   Link,
+  useMediaQuery,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import ArticleCard from "./ArticleCard";
 import ArticleCardMobile from "./ArticleCardMobile";
-
+import { wpArticle } from "@/types/wp";
+import fetcher from "@/utils/utils";
+import useSWR from "swr";
 export default function Article() {
+  const { data, error } = useSWR<wpArticle[]>("/api/wp-article", fetcher);
   const variantHeading = useBreakpointValue({ base: "h4", lg: "h2" });
   const [mediaQuery] = useMediaQuery("(min-width: 1024px)");
-  const [isTablet, setIsTablet] = useState<boolean>(false);
+  const [isTablet, setIsTablet] = useState<boolean>(true);
+
+  if (error) {
+    console.error(error);
+  }
+
   useEffect(() => {
     if (mediaQuery !== isTablet) {
       setIsTablet(mediaQuery);
     }
-  }, [mediaQuery]);
+  }, [mediaQuery, isTablet]);
   return (
     <Box
       width="full"
@@ -90,22 +98,19 @@ export default function Article() {
                   bottom: "30px",
                   right: "-10px",
                 }}
+                minH={["500px", "500px", "900px"]}
               >
                 {isTablet ? (
                   <>
-                    <ArticleCard />
-                    <ArticleCard />
+                    {data?.map((article) => (
+                      <ArticleCard key={article.id} data={article} />
+                    ))}
                   </>
                 ) : (
                   <>
-                    <ArticleCardMobile
-                      headlineCard="A Feminism History Recap: The First Wave of Feminism"
-                      imageBg="/img/article/mobile-cover-1.png"
-                    />
-                    <ArticleCardMobile
-                      headlineCard="Diferensiasi, Relasionalitas dan Fraksi: Panduan Analisis Kelas Agraria"
-                      imageBg="/img/article/mobile-cover-2.png"
-                    />
+                    {data?.map((article) => (
+                      <ArticleCardMobile key={article.id} data={article} />
+                    ))}
                   </>
                 )}
               </VStack>
