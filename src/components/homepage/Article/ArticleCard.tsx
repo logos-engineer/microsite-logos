@@ -38,6 +38,8 @@ export default function ArticleCard({ data }: Props) {
         px="4"
         gridGap="5"
         borderRightRadius="3xl"
+        position="relative"
+        zIndex="1"
       >
         <Heading as="h2" variant="h4" fontWeight="bold">
           {data.title.rendered}
