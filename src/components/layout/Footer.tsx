@@ -60,7 +60,6 @@ const Footer = () => {
         position="absolute"
         zIndex="3"
         py={{ base: 3, lg: 3 }}
-        centerContent
         left="0"
         bottom="0"
         right="0"

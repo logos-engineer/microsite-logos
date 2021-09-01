@@ -2,12 +2,15 @@ import { Heading, Box, GridItem, Text, Button } from "@chakra-ui/react";
 import Image from "next/image";
 import { wpArticle } from "@/types/wp";
 import Link from "next/link";
+import useDataUrl from "../../../hooks/useDataUrl";
 
 interface Props {
   data: wpArticle;
 }
 
 export default function ArticleCard({ data }: Props) {
+  const dataUrl = useDataUrl(275, 332);
+
   const imageURL = data._embedded["wp:featuredmedia"][0].source_url;
   return (
     <Box w="full" display="grid" gridTemplateColumns="repeat(5,1fr)">
@@ -21,7 +24,8 @@ export default function ArticleCard({ data }: Props) {
               "-",
               " "
             )}
-            placeholder="empty"
+            placeholder="blur"
+            blurDataURL={dataUrl}
             layout="responsive"
           />
         </Box>

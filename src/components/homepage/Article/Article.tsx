@@ -20,12 +20,17 @@ export default function Article() {
   const { data, error } = useSWR<wpArticle[]>("/api/wp-article", fetcher);
   const variantHeading = useBreakpointValue({ base: "h4", lg: "h2" });
   const [mediaQuery] = useMediaQuery("(min-width: 1024px)");
-  const [isTablet, setIsTablet] = useState<boolean>(false);
+  const [isTablet, setIsTablet] = useState<boolean>(true);
+
+  if (error) {
+    console.error(error);
+  }
+
   useEffect(() => {
     if (mediaQuery !== isTablet) {
       setIsTablet(mediaQuery);
     }
-  }, [mediaQuery]);
+  }, [mediaQuery, isTablet]);
   return (
     <Box
       width="full"
@@ -93,46 +98,32 @@ export default function Article() {
                   bottom: "30px",
                   right: "-10px",
                 }}
+                minH={["500px", "500px", "900px"]}
               >
-                <Box marginY="-8" display="flex">
-                  <Heading variant="h2" as="h1" zIndex="20" flexGrow={1}>
-                    Our Latest Articles
-                  </Heading>
-                  <Link href="https://logosid.xyz" role="link" isExternal>
-                    <Button variant="primary">Visit Our Website</Button>
-                  </Link>
-                </Box>
-
-                <VStack py="14" position="relative" spacing="10" minH="900px">
-                  {isTablet ? (
-                    <>
-                      {data?.map((article) => (
-                        <ArticleCard key={article.id} data={article} />
-                      ))}
-                    </>
-                  ) : (
-                    <>
-                      {data?.map((article) => (
-                        <ArticleCardMobile
-                          key={article.id}
-                          headlineCard={article.title.rendered}
-                          imageBg="/img/article/mobile-cover-1.png"
-                        />
-                      ))}
-                    </>
-                  )}
-                </VStack>
-                <Link
-                  href="https://logosid.xyz"
-                  role="link"
-                  isExternal
-                  d={{ base: "inline-flex", lg: "none" }}
-                  mb="-25px"
-                  mx="auto"
-                >
-                  <Button variant="primary">Visit Out Website</Button>
-                </Link>
+                {isTablet ? (
+                  <>
+                    {data?.map((article) => (
+                      <ArticleCard key={article.id} data={article} />
+                    ))}
+                  </>
+                ) : (
+                  <>
+                    {data?.map((article) => (
+                      <ArticleCardMobile key={article.id} data={article} />
+                    ))}
+                  </>
+                )}
               </VStack>
+              <Link
+                href="https://logosid.xyz"
+                role="link"
+                isExternal
+                d={{ base: "inline-flex", lg: "none" }}
+                mb="-25px"
+                mx="auto"
+              >
+                <Button variant="primary">Visit Out Website</Button>
+              </Link>
             </Container>
           </Box>
         </GridItem>
