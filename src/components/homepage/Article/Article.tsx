@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import ArticleCard from "./ArticleCard";
 import { wpArticle } from "@/types/wp";
-import { fetcher } from "@/utils/utils";
+import fetcher from "@/utils/utils";
 import useSWR from "swr";
 
 export default function Article() {
