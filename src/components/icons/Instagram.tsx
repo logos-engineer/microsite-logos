@@ -1,6 +1,6 @@
 import { Icon } from "@chakra-ui/react";
 
-const Instagram = (props: any) => {
+export const Instagram = (props: any) => {
   return (
     <Icon
       viewBox="0 0 64 64"
@@ -20,4 +20,3 @@ const Instagram = (props: any) => {
   );
 };
 
-export default Instagram;

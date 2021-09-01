@@ -9,6 +9,9 @@ import {
   Button,
   Link,
 } from "@chakra-ui/react";
+import splitbee from "@splitbee/web";
+import { SPLITBEE_EVENTS_NAME } from "constants/eventSplitbee";
+import { LOGOS_LINK, MICROSITE_GITHUB_LINK } from '../../constants/paths';
 
 const Footer = () => {
   return (
@@ -31,8 +34,8 @@ const Footer = () => {
               Please contact us through this button below.
             </Text>
             <HStack spacing="24px" mt="32px">
-              <Link role="link" href="https://logosid.xyz" isExternal>
-                <Button variant="primary">Visit Our Website</Button>
+              <Link role="link" href={LOGOS_LINK} isExternal>
+                <Button onClick={()=> splitbee.track(SPLITBEE_EVENTS_NAME.ARTICLES_LOGOS, {link: LOGOS_LINK})} variant="primary">Visit Our Website</Button>
               </Link>
             </HStack>
           </GridItem>
@@ -44,9 +47,10 @@ const Footer = () => {
             &copy; 2021. Made with ❤ by
           </Text>
           <Link
-            href="https://github.com/logos-engineer/microsite-logos"
+            href={MICROSITE_GITHUB_LINK}
             isExternal
             role="link"
+            onClick={()=> splitbee.track(SPLITBEE_EVENTS_NAME.EXTERNAL_LINK, {link: MICROSITE_GITHUB_LINK})}
           >
             <Text variant="lg" color="white">
               Logos Engineer

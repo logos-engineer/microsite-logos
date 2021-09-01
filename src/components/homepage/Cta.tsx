@@ -8,6 +8,9 @@ import {
   Image,
   VStack,
 } from "@chakra-ui/react";
+import splitbee from "@splitbee/web";
+import { SPLITBEE_EVENTS_NAME } from "constants/eventSplitbee";
+import { WEBINAR_LINK } from "constants/paths";
 import AccessibleLink from "../AccessibleLink";
 
 const Cta = () => {
@@ -39,7 +42,7 @@ const Cta = () => {
                   href="https://karyakarsa.com/logos_id"
                   isExternal
                 >
-                  <Button>Support Us</Button>
+                  <Button onClick={()=> splitbee.track(SPLITBEE_EVENTS_NAME.SUPPORT, {link: WEBINAR_LINK})}>Support Us</Button>
                 </AccessibleLink>
               </VStack>
             </GridItem>

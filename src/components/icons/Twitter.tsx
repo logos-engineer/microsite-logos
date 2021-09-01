@@ -1,6 +1,6 @@
 import { Icon } from "@chakra-ui/react";
 
-const Twitter = (props: any) => {
+export const Twitter = (props: any) => {
   return (
     <Icon
       viewBox="0 0 62 50"
@@ -16,4 +16,3 @@ const Twitter = (props: any) => {
   );
 };
 
-export default Twitter;

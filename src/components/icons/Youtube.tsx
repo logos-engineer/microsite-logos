@@ -1,6 +1,6 @@
 import { Icon } from "@chakra-ui/react";
 
-const Youtube = (props: any) => {
+export const Youtube = (props: any) => {
   return (
     <Icon
       viewBox="0 0 92 64"
@@ -16,4 +16,3 @@ const Youtube = (props: any) => {
   );
 };
 
-export default Youtube;

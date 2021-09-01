@@ -1,6 +1,6 @@
 import { Icon } from "@chakra-ui/react";
 
-const Spotify = (props: any) => {
+export const Spotify = (props: any) => {
   return (
     <Icon
       viewBox="0 0 64 64"
@@ -16,4 +16,3 @@ const Spotify = (props: any) => {
   );
 };
 
-export default Spotify;

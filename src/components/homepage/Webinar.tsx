@@ -13,6 +13,9 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import ImageWebinar from "@/public/img/image-webinar.png";
+import splitbee from "@splitbee/web";
+import { SPLITBEE_EVENTS_NAME } from "constants/eventSplitbee";
+import { WEBINAR_LINK } from "constants/paths";
 
 export default function Webinar() {
   const variantTitle = useBreakpointValue({ base: "mobile-h3", lg: "h3" });
@@ -22,6 +25,7 @@ export default function Webinar() {
     lg: "lg",
   });
   const variantSizeButton = useBreakpointValue({ base: "xs", sm: "md" });
+
   return (
     <Container mb="20" mt={{ base: "50px", lg: "0" }} as="section" id="webinar">
       <Grid
@@ -68,7 +72,7 @@ export default function Webinar() {
             </Text>
           </VStack>
           <Link href="https://lynk.id/logos_id" role="link" isExternal>
-            <Button variant="primary" size={variantSizeButton}>
+            <Button variant="primary" size={variantSizeButton} onClick={()=> splitbee.track(SPLITBEE_EVENTS_NAME.REGISTER_WEBINAR, {link: WEBINAR_LINK})}>
               Daftar Webinar
             </Button>
           </Link>

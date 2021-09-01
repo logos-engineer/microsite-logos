@@ -8,6 +8,9 @@ import {
   Button,
   Link,
 } from "@chakra-ui/react";
+import splitbee from "@splitbee/web";
+import { SPLITBEE_EVENTS_NAME } from "constants/eventSplitbee";
+import { WEBINAR_LINK } from "constants/paths";
 import ArticleCard from "./ArticleCard";
 
 export default function Article() {
@@ -52,7 +55,7 @@ export default function Article() {
                   Our Latest Articles
                 </Heading>
                 <Link href="https://logosid.xyz" role="link" isExternal>
-                  <Button variant="primary">Visit Our Website</Button>
+                  <Button variant="primary" onClick={()=> splitbee.track(SPLITBEE_EVENTS_NAME.REGISTER_WEBINAR,{link: WEBINAR_LINK})}>Visit Our Website</Button>
                 </Link>
               </Box>
 
