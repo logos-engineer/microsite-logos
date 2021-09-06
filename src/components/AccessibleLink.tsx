@@ -22,6 +22,7 @@ const AccessibleLink:React.FC<AccessibleLinkProps> = ({
         role={role}
         aria-label={props["aria-label"]}
         onClick={onClick}
+        {...props}
       >
         {children}
       </ChakraLink>

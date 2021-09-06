@@ -1,4 +1,4 @@
-import { VStack, HStack, Heading, Button } from "@chakra-ui/react";
+import { VStack, HStack, Heading, useBreakpointValue } from "@chakra-ui/react";
 import AccessibleLink from "@/components/AccessibleLink";
 import splitbee from "@splitbee/web";
 import { SPLITBEE_EVENTS_NAME } from "constants/eventSplitbee";
@@ -35,9 +35,18 @@ const FollowUs = () => {
     );
   };
 
+  const variantHeading = useBreakpointValue({ base: "h4", lg: "h2" });
   return (
-    <VStack spacing="64px" as="section" mb="140px" id="sosial-media">
-      <Heading variant="h1" as="h1" color="black.primary">
+    <VStack
+      spacing={{ base: "20px", lg: "64px" }}
+      as="section"
+      mb={{ base: "45px", lg: "140px" }}
+      id="sosial-media"
+      maxW="container.xl"
+      w="full"
+      mx="auto"
+    >
+      <Heading variant={variantHeading} as="h1" color="black.primary">
         Follow Us
       </Heading>
       <HStack minW="555px" spacing="111px">
