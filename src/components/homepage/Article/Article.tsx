@@ -10,9 +10,6 @@ import {
   useMediaQuery,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import splitbee from "@splitbee/web";
-import { SPLITBEE_EVENTS_NAME } from "constants/eventSplitbee";
-import { WEBINAR_LINK } from "constants/paths";
 import { useEffect, useState } from "react";
 import ArticleCard from "./ArticleCard";
 import ArticleCardMobile from "./ArticleCardMobile";
