@@ -2,8 +2,8 @@ import { VStack, HStack, Heading, useBreakpointValue } from "@chakra-ui/react";
 import AccessibleLink from "@/components/AccessibleLink";
 import splitbee from "@splitbee/web";
 import { SPLITBEE_EVENTS_NAME } from "constants/eventSplitbee";
-import { SOCIAL_MEDIA } from '../../constants/data';
-import { Instagram, Spotify, Twitter, Youtube} from '../icons/index';
+import { SOCIAL_MEDIA } from 'constants/data';
+import { Instagram, Spotify, Twitter, Youtube} from '@/components/icons/index';
 
 const FollowUs = () => {
   const renderIcon = (type: string) => {

@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import splitbee from "@splitbee/web";
 import { SPLITBEE_EVENTS_NAME } from "constants/eventSplitbee";
-import { LOGOS_LINK, MICROSITE_GITHUB_LINK } from '../../constants/paths';
+import { LOGOS_LINK, MICROSITE_GITHUB_LINK } from 'constants/paths';
 
 const Footer = () => {
   const variantHeading = useBreakpointValue({ base: "subtitle2", lg: "h2" });
