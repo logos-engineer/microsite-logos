@@ -14,6 +14,9 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import HeroImage from "@/public/img/hero.png";
+import splitbee from "@splitbee/web";
+import { SPLITBEE_EVENTS_NAME } from "constants/eventSplitbee";
+import { SUPPORT_LINK, WEBINAR_LINK } from "constants/paths";
 
 const SquareIllustrate = (props: any) => {
   return (
@@ -36,6 +39,11 @@ const SquareIllustrate = (props: any) => {
 const Hero = () => {
   const variantTitle = useBreakpointValue({ base: "mobile-h1", lg: "h1" });
   const variantSubtitle = useBreakpointValue({ base: "md", lg: "lg" });
+
+  const pressButton = (link: any, type:string) =>{
+    let event = type === 'webinar' ? SPLITBEE_EVENTS_NAME.REGISTER_WEBINAR : SPLITBEE_EVENTS_NAME.SUPPORT_US;
+    splitbee.track(`${event}`, {link})
+  }
 
   return (
     <Box w="full" position="relative" as="section" id="hero">
@@ -87,12 +95,13 @@ const Hero = () => {
               Pop Culture, dan Sains.
             </Text>
             <HStack spacing="24px" mt="32px" d={{ base: "none", lg: "flex" }}>
-              <Link isExternal href="https://lynk.id/logos_id">
-                <Button variant="primary" size="md" fontWeight="semibold">
+
+              <Link isExternal href={WEBINAR_LINK}>
+                <Button variant="primary" size="md" fontWeight="semibold" onClick={()=>pressButton(WEBINAR_LINK, 'webinar')}>
                   Daftar Webinar
                 </Button>
               </Link>
-              <Link isExternal href="https://karyakarsa.com/logos_id">
+              <Link isExternal href={SUPPORT_LINK}>
                 <Button
                   variant="outline"
                   borderColor="white"
@@ -103,6 +112,7 @@ const Hero = () => {
                     borderColor: "blue.700",
                     bg: "blue.700",
                   }}
+                  onClick={()=>{pressButton(SUPPORT_LINK, 'support')}}
                 >
                   Support Us
                 </Button>

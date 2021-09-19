@@ -102,13 +102,13 @@ export default function Article() {
               >
                 {isTablet ? (
                   <>
-                    {data?.map((article) => (
+                    {data?.map((article:any) => (
                       <ArticleCard key={article.id} data={article} />
                     ))}
                   </>
                 ) : (
                   <>
-                    {data?.map((article) => (
+                    {data?.map((article:any) => (
                       <ArticleCardMobile key={article.id} data={article} />
                     ))}
                   </>
