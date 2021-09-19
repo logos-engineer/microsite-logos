@@ -54,7 +54,7 @@ const Cta = () => {
                   Dukung kami untuk jadi Logos yang lebih baik
                 </Heading>
                 <AccessibleLink
-                  href="https://karyakarsa.com/logos_id"
+                  href="https://lynk.id/logos_id"
                   isExternal
                   role="url"
                   aria-label="support-us"

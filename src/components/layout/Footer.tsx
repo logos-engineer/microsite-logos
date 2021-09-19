@@ -47,9 +47,13 @@ const Footer = () => {
               Please contact us through this button below.
             </Text>
             <HStack spacing="24px" mt={{ base: "12px", lg: "32px" }}>
-              <Link role="link" href="https://logosid.xyz" isExternal>
+              <Link
+                role="link"
+                href="https://forms.gle/XZoNRNTwHTj9DZzF6"
+                isExternal
+              >
                 <Button variant="primary" size={variantButton}>
-                  Visit Our Website
+                  Kirim form
                 </Button>
               </Link>
             </HStack>

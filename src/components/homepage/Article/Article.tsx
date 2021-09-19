@@ -78,7 +78,7 @@ export default function Article() {
                   zIndex="5"
                   pos="relative"
                 >
-                  Visit Out Website
+                  Visit Our Website
                 </Button>
               </Box>
 
