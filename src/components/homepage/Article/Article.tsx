@@ -78,7 +78,7 @@ export default function Article() {
                   zIndex="5"
                   pos="relative"
                 >
-                  Visit Out Website
+                  Visit Our Website
                 </Button>
               </Box>
 
@@ -102,13 +102,13 @@ export default function Article() {
               >
                 {isTablet ? (
                   <>
-                    {data?.map((article:any) => (
+                    {data?.map((article: any) => (
                       <ArticleCard key={article.id} data={article} />
                     ))}
                   </>
                 ) : (
                   <>
-                    {data?.map((article:any) => (
+                    {data?.map((article: any) => (
                       <ArticleCardMobile key={article.id} data={article} />
                     ))}
                   </>

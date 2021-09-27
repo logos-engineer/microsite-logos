@@ -57,13 +57,22 @@ const Cta = () => {
                   Dukung kami untuk jadi Logos yang lebih baik
                 </Heading>
                 <AccessibleLink
-                  href="https://karyakarsa.com/logos_id"
+                  href="https://lynk.id/logos_id"
                   isExternal
                   role="url"
                   aria-label="support-us"
                   mt="auto"
                 >
-                  <Button size={variantSupport} onClick={()=> splitbee.track(SPLITBEE_EVENTS_NAME.SUPPORT, {link: WEBINAR_LINK})}>Support Us</Button>
+                  <Button
+                    size={variantSupport}
+                    onClick={() =>
+                      splitbee.track(SPLITBEE_EVENTS_NAME.SUPPORT, {
+                        link: WEBINAR_LINK,
+                      })
+                    }
+                  >
+                    Support Us
+                  </Button>
                 </AccessibleLink>
               </VStack>
             </GridItem>

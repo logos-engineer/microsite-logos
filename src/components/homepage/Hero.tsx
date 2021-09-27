@@ -40,10 +40,13 @@ const Hero = () => {
   const variantTitle = useBreakpointValue({ base: "mobile-h1", lg: "h1" });
   const variantSubtitle = useBreakpointValue({ base: "md", lg: "lg" });
 
-  const pressButton = (link: any, type:string) =>{
-    let event = type === 'webinar' ? SPLITBEE_EVENTS_NAME.REGISTER_WEBINAR : SPLITBEE_EVENTS_NAME.SUPPORT_US;
-    splitbee.track(`${event}`, {link})
-  }
+  const pressButton = (link: any, type: string) => {
+    let event =
+      type === "webinar"
+        ? SPLITBEE_EVENTS_NAME.REGISTER_WEBINAR
+        : SPLITBEE_EVENTS_NAME.SUPPORT_US;
+    splitbee.track(`${event}`, { link });
+  };
 
   return (
     <Box w="full" position="relative" as="section" id="hero">
@@ -95,9 +98,13 @@ const Hero = () => {
               Pop Culture, dan Sains.
             </Text>
             <HStack spacing="24px" mt="32px" d={{ base: "none", lg: "flex" }}>
-
               <Link isExternal href={WEBINAR_LINK}>
-                <Button variant="primary" size="md" fontWeight="semibold" onClick={()=>pressButton(WEBINAR_LINK, 'webinar')}>
+                <Button
+                  variant="primary"
+                  size="md"
+                  fontWeight="semibold"
+                  onClick={() => pressButton(WEBINAR_LINK, "webinar")}
+                >
                   Daftar Webinar
                 </Button>
               </Link>
@@ -112,7 +119,9 @@ const Hero = () => {
                     borderColor: "blue.700",
                     bg: "blue.700",
                   }}
-                  onClick={()=>{pressButton(SUPPORT_LINK, 'support')}}
+                  onClick={() => {
+                    pressButton(SUPPORT_LINK, "support");
+                  }}
                 >
                   Support Us
                 </Button>

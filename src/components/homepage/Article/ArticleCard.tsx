@@ -17,6 +17,7 @@ export default function ArticleCard({ data }: Props) {
       <GridItem colSpan={2}>
         <Box width="100%" height="100%">
           <Image
+            objectFit="cover"
             src={imageURL}
             width={360}
             height={352}

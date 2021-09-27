@@ -6,7 +6,7 @@ import Link, { LinkProps } from "next/link";
 
 type AccessibleLinkProps = LinkProps & ChakraLinkProps;
 
-const AccessibleLink:React.FC<AccessibleLinkProps> = ({
+const AccessibleLink: React.FC<AccessibleLinkProps> = ({
   href,
   isExternal,
   children,

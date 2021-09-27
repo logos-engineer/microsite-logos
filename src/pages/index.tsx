@@ -8,15 +8,13 @@ import FollowUs from "@/components/homepage/FollowUs";
 import Cta from "@/components/homepage/Cta";
 
 const Home = () => {
-
   useEffect((): void => {
     splitbee.init({
-      token: 'M6FJO0PCQR94', 
+      token: "M6FJO0PCQR94",
       disableCookie: false,
       scriptUrl: "https://cdn.splitbee.io/sb.js",
       apiUrl: "https://hive.splitbee.io",
-    })
-    
+    });
   }, []);
 
   return (

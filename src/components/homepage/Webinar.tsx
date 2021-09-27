@@ -72,7 +72,15 @@ export default function Webinar() {
             </Text>
           </VStack>
           <Link href="https://lynk.id/logos_id" role="link" isExternal>
-            <Button variant="primary" size={variantSizeButton} onClick={()=> splitbee.track(SPLITBEE_EVENTS_NAME.REGISTER_WEBINAR, {link: WEBINAR_LINK})}>
+            <Button
+              variant="primary"
+              size={variantSizeButton}
+              onClick={() =>
+                splitbee.track(SPLITBEE_EVENTS_NAME.REGISTER_WEBINAR, {
+                  link: WEBINAR_LINK,
+                })
+              }
+            >
               Daftar Webinar
             </Button>
           </Link>

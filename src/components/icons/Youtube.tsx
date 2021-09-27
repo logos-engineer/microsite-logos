@@ -15,4 +15,3 @@ export const Youtube = (props: any) => {
     </Icon>
   );
 };
-
